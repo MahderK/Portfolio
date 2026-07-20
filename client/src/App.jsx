@@ -1,21 +1,18 @@
-import Navbar from "./components/Navbar.jsx";
-import Hero from "./components/Hero.jsx";
-import About from "./components/About.jsx";
-import Projects from "./components/Projects.jsx";
-import Skills from "./components/Skills.jsx";
-import Contact from "./components/Contact.jsx";
-import Footer from "./components/Footer.jsx";
+import { useState } from "react";
+import Terminal from "./components/Terminal/Terminal";
+import Desktop from "./components/Desktop/Desktop";
 
 function App() {
+  const [mode, setMode] = useState("terminal"); // "terminal" | "desktop"
+
   return (
     <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
+      {mode === "terminal" && (
+        <Terminal onSwitchMode={() => setMode("desktop")} />
+      )}
+      {mode === "desktop" && (
+        <Desktop onSwitchMode={() => setMode("terminal")} />
+      )}
     </>
   );
 }
