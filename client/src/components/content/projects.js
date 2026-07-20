@@ -26,6 +26,26 @@ export const projects = [
     status: "Live",
   },
   {
+    id: "huntin-wild",
+    title: "Huntin' Wild",
+    description:
+      "Short game made for a game jam organized by me and friends that lasted for 3 days.",
+    tags: ["GDScript", "Godot"],
+    github: "https://github.com/MahderK/huntin-wild",
+    live: null,
+    status: "In Development",
+  },
+  {
+    id: "umbrella",
+    title: "Project Umbrella",
+    description:
+      "Short game made for the Reciprocate GameJam that is made in 6 months",
+    tags: ["GDScript", "Godot", "Blender", "LMMS", "Krita"],
+    github: "https://github.com/MahderK/project-umbrella",
+    live: null,
+    status: "In Development",
+  },
+  {
     id: "server",
     title: "Linux Server",
     description:

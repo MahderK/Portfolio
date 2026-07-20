@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { parseCommand } from "./commandParser";
-// import ProjectsView from "../content/ProjectsView";
-// import SkillsView from "../content/SkillsView";
-// import ContactView from "../content/ContactView";
+import ProjectsView from "../content/ProjectsView";
+import SkillsView from "../content/SkillsView";
+import ContactView from "../content/ContactView";
 
 const componentMap = {
-  // ProjectsView,
-  // SkillsView,
-  // ContactView,
+  ProjectsView,
+  SkillsView,
+  ContactView,
 };
 
 function Terminal({ onSwitchMode }) {
