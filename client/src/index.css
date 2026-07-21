@@ -87,7 +87,7 @@ a {
 /* Contact Styles */
 
 .contact-intro {
-  color: var(--accent);
+  color: var(--titles);
 }
 
 .contact-label {

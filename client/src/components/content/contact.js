@@ -20,7 +20,6 @@ export const contact = [
   {
     label: "Telegram",
     value: "@justmahder",
-    href: "@justmahder",
     icon: "tg",
   },
 ];
