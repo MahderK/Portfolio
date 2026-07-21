@@ -3,6 +3,7 @@ import { projects } from "./projects";
 function ProjectsView() {
   return (
     <div className="projects">
+      <p className="project-intro">// Green links are clickable!!</p>
       {projects.map((p) => (
         <div key={p.id} className="project-card">
           <div className="project-header">
@@ -13,14 +14,14 @@ function ProjectsView() {
           <div className="project-tags">
             {p.tags.map((t) => (
               <span key={t} className="tag">
-                {t}
+                {t},&nbsp;
               </span>
             ))}
           </div>
           <div className="project-links">
             {p.github && (
               <a href={p.github} target="_blank">
-                GitHub
+                GitHub&nbsp;
               </a>
             )}
             {p.live && (

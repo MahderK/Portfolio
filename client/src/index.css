@@ -15,29 +15,30 @@
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   --accent: #20c20e;
+  --tags: #aa3bff;
+  --titles: #aa3bff;
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: "Departure Mono", Roboto, sans-serif;
-  --heading: "Departure Mono", Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --mono: "Departure Mono", monospace;
 
-  font: 18px/145% var(--sans);
+  font: 15px var(--mono);
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
   background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
   @media (max-width: 1024px) {
     font-size: 16px;
   }
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
 }
 
 /* Terminal Styles */
@@ -45,7 +46,7 @@
   display: flex;
 }
 
-..input-wrapper {
+.input-wrapper {
   position: relative;
   display: flex;
   align-items: center;
@@ -90,5 +91,16 @@
 }
 
 .contact-label {
-  color: var(--accent);
+  color: var(--titles);
+}
+
+/* Projects Style */
+.project-intro {
+  color: var(--titles);
+}
+.project-title {
+  color: var(--titles);
+}
+.tag {
+  color: var(--titles);
 }
