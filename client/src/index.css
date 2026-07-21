@@ -104,3 +104,13 @@ a {
 .tag {
   color: var(--titles);
 }
+
+/* Skills Style */
+
+.skill-category {
+  color: var(--titles);
+}
+
+.skill-item {
+  color: var(--accent);
+}

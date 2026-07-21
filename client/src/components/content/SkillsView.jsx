@@ -9,7 +9,7 @@ function SkillsView() {
           <div className="skill-items">
             {group.items.map((skill) => (
               <span key={skill} className="skill-tag">
-                [{skill}]
+                [<span className="skill-item">{skill}</span>]
               </span>
             ))}
           </div>
