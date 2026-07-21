@@ -11,8 +11,7 @@ export const projects = [
       "Docker",
       "WebSockets",
     ],
-    github: "Proprietary",
-    live: null, // swap in URL once deployed
+    live: "table-tap.tech", // swap in URL once deployed
     status: "In Development",
   },
   {

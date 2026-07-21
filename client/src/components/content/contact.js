@@ -17,4 +17,10 @@ export const contact = [
     href: "https://www.linkedin.com/in/mahder-kassaw-575093296/",
     icon: "li",
   },
+  {
+    label: "Telegram",
+    value: "@justmahder",
+    href: "@justmahder",
+    icon: "tg",
+  },
 ];

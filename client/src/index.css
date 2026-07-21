@@ -14,7 +14,7 @@
   --bg: #000000;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
-  --accent: #aa3bff;
+  --accent: #20c20e;
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
@@ -40,6 +40,7 @@
   }
 }
 
+/* Terminal Styles */
 .input-row {
   display: flex;
 }
@@ -80,4 +81,14 @@
   50% {
     opacity: 0;
   }
+}
+
+/* Contact Styles */
+
+.contact-intro {
+  color: var(--accent);
+}
+
+.contact-label {
+  color: var(--accent);
 }
