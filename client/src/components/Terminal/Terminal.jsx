@@ -13,6 +13,7 @@ const componentMap = {
 function Terminal({ onSwitchMode }) {
   const [history, setHistory] = useState([]);
   const [input, setInput] = useState("");
+  const [focused, setFocused] = useState(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -50,12 +51,25 @@ function Terminal({ onSwitchMode }) {
         ))}
       </div>
       <form onSubmit={handleSubmit}>
-        <span>&gt;</span>
-        <input
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          autoFocus
-        />
+        <div className="input-row">
+          <span className="prompt">&gt;&nbsp;</span>
+          <div className="input-wrapper">
+            {/* The real input is hidden but functional */}
+            <input
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onFocus={() => setFocused(true)}
+              onBlur={() => setFocused(false)}
+              autoFocus
+              className="terminal-input"
+            />
+            {/* The visual fake input that correctly sizes to the text */}
+            <div className="fake-input">
+              <span>{input}</span>
+              {focused && <span className="block-cursor">█</span>}
+            </div>
+          </div>
+        </div>
       </form>
     </div>
   );
