@@ -1,5 +1,8 @@
 export const commands = {
-  help: () => "Available commands: projects, skills, contact, gui, clear",
+  help: () => ({
+    type: "info",
+    message: "Available commands: projects, skills, contact, gui, clear",
+  }),
   projects: () => ({ type: "component", name: "ProjectsView" }),
   skills: () => ({ type: "component", name: "SkillsView" }),
   contact: () => ({ type: "component", name: "ContactView" }),
@@ -10,6 +13,6 @@ export const commands = {
 export function parseCommand(input) {
   const cmd = input.trim().toLowerCase();
   const handler = commands[cmd];
-  if (!handler) return { type: "error", message: `command not found: ${cmd}` };
+  if (!handler) return { type: "error", message: `command not found` };
   return handler();
 }
