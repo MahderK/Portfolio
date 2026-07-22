@@ -11,6 +11,12 @@
 :root {
   --text: #6b6375;
   --text-h: #08060d;
+  --terminal-bg: #0a0a0a;
+  --terminal-green: #33ff00;
+  --terminal-amber: #ffb000;
+  --terminal-cyan: #00d4ff;
+  --terminal-red: #ff3333;
+  --terminal-dim: #1a5c1a;
   --bg: #000000;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
