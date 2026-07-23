@@ -17,10 +17,7 @@
   --terminal-cyan: #00d4ff;
   --terminal-red: #ff3333;
   --terminal-dim: #1a5c1a;
-  text-shadow:
-    0 0 5px rgba(51, 255, 0, 0.6),
-    0 0 15px rgba(51, 255, 0, 0.3),
-    0 0 30px rgba(51, 255, 0, 0.1);
+
   --tags: #aa3bff;
 
   --mono: "Departure Mono", monospace;
@@ -72,6 +69,10 @@ a {
   width: 100vw;
   height: 100vh;
   overflow-y: auto;
+  text-shadow:
+    0 0 5px rgba(51, 255, 0, 0.6),
+    0 0 15px rgba(51, 255, 0, 0.3),
+    0 0 30px rgba(51, 255, 0, 0.1);
   box-shadow:
     inset 0 0 150px rgba(0, 0, 0, 0.8),
     inset 0 0 400px rgba(51, 255, 0, 0.03);
