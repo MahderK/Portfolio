@@ -17,14 +17,18 @@
   --terminal-cyan: #00d4ff;
   --terminal-red: #ff3333;
   --terminal-dim: #1a5c1a;
+  text-shadow:
+    0 0 5px rgba(51, 255, 0, 0.6),
+    0 0 15px rgba(51, 255, 0, 0.3),
+    0 0 30px rgba(51, 255, 0, 0.1);
   --tags: #aa3bff;
 
   --mono: "Departure Mono", monospace;
 
   font: 15px var(--mono);
   letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
+  color-scheme: dark;
+  color: var(--terminal-green);
   background: var(--terminal-bg);
 
   @media (max-width: 1024px) {
@@ -51,7 +55,7 @@ body::after {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: var(--terminal-green);
 }
 
@@ -83,7 +87,7 @@ a {
 }
 
 .block-cursor {
-  color: #ffffff;
+  color: --terminal-green;
   animation: blink 1s step-end infinite;
   pointer-events: none;
 }
@@ -96,35 +100,4 @@ a {
   50% {
     opacity: 0;
   }
-}
-
-/* Contact Styles */
-
-.contact-intro {
-  color: var(--terminal-amber);
-}
-
-.contact-label {
-  color: var(--terminal-cyan);
-}
-
-/* Projects Style */
-.project-intro {
-  color: var(--terminal-amber);
-}
-.project-title {
-  color: var(--terminal-cyan);
-}
-.tag {
-  color: var(--tags);
-}
-
-/* Skills Style */
-
-.skill-category {
-  color: var(--terminal-cyan);
-}
-
-.skill-item {
-  color: var(--terminal-green);
 }
