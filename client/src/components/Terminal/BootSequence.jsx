@@ -53,14 +53,17 @@ function BootSequence({ onComplete }) {
   return (
     <div className="terminal p-4" onClick={handleSkip}>
       {displayedLines.map((line, i) => (
-        <div key={i}>{line}</div>
+        <div key={i} className="whitespace-pre-wrap">
+          {line}
+        </div>
       ))}
 
       {currentLineIndex < bootMessage.length && (
-        <div className="flex">
+        <div className="flex whitespace-pre-wrap">
           <span>
             {bootMessage[currentLineIndex].slice(0, currentCharIndex)}
           </span>
+          <span className="cursor">█</span>
         </div>
       )}
     </div>

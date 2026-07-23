@@ -118,6 +118,11 @@ a {
   pointer-events: none;
 }
 
+.cursor {
+  color: var(--terminal-green);
+  pointer-events: none;
+}
+
 @keyframes blink {
   0%,
   100% {
