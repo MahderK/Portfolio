@@ -17,17 +17,7 @@
   --terminal-cyan: #00d4ff;
   --terminal-red: #ff3333;
   --terminal-dim: #1a5c1a;
-  --bg: #000000;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #20c20e;
   --tags: #aa3bff;
-  --titles: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
   --mono: "Departure Mono", monospace;
 
@@ -35,7 +25,7 @@
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
-  background: var(--bg);
+  background: var(--terminal-bg);
 
   @media (max-width: 1024px) {
     font-size: 16px;
@@ -62,7 +52,7 @@ body::after {
 
 a {
   text-decoration: none;
-  color: var(--accent);
+  color: var(--terminal-green);
 }
 
 /* Terminal Styles */
@@ -111,30 +101,30 @@ a {
 /* Contact Styles */
 
 .contact-intro {
-  color: var(--titles);
+  color: var(--terminal-amber);
 }
 
 .contact-label {
-  color: var(--titles);
+  color: var(--terminal-cyan);
 }
 
 /* Projects Style */
 .project-intro {
-  color: var(--titles);
+  color: var(--terminal-amber);
 }
 .project-title {
-  color: var(--titles);
+  color: var(--terminal-cyan);
 }
 .tag {
-  color: var(--titles);
+  color: var(--tags);
 }
 
 /* Skills Style */
 
 .skill-category {
-  color: var(--titles);
+  color: var(--terminal-cyan);
 }
 
 .skill-item {
-  color: var(--accent);
+  color: var(--terminal-green);
 }
