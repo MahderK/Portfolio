@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       {mode === "booting" && (
-        <BootSequence onComplete={() => setMode("terminal")} />
+        <BootSequence onComplete={() => setMode("desktop")} />
       )}
       {mode === "terminal" && (
         <Terminal onSwitchMode={() => setMode("desktop")} />

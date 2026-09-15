@@ -9,7 +9,7 @@ const bootMessage = [
   "[NET] Initializing uplink ............... OK",
   "[SYS] Checking functionality ............ FAIL",
   "     RETRYING ............... OK",
-  "[SYS] MAHDER TERMINAL v1.0.1 - UESC",
+  "[SYS] MAHDER OS v1.0.1 - UESC",
   "[AUTH] Guest access granted",
 ];
 
@@ -33,7 +33,7 @@ function BootSequence({ onComplete }) {
         () => {
           setCurrentCharIndex((prev) => prev + 1);
         },
-        Math.random() * 30 + 10,
+        Math.random() * 15 + 10,
       );
       return () => clearTimeout(timer);
     } else {

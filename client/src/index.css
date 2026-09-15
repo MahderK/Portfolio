@@ -154,3 +154,110 @@ a {
     opacity: 1;
   }
 }
+
+/* Desktop Styles */
+
+.desktop {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #0d0b14 0%, #15121e 50%, #0d0b14 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.desktop-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem;
+  align-content: flex-start;
+}
+
+.desktop-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: var(--terminal-green);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+}
+
+.desktop-icon:hover {
+  background: rgba(170, 59, 255, 0.1);
+}
+
+.desktop-icon-img {
+  width: 48px;
+  height: 48px;
+}
+
+.desktop-icon-label {
+  text-shadow: 0 0 6px rgba(51, 255, 0, 0.4);
+}
+
+/* Window Styles */
+
+.window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 420px;
+  max-width: 700px;
+  max-height: 80vh;
+  background: #111;
+  border: 1px solid var(--terminal-dim);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(51, 255, 0, 0.08), 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.window-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background: #1a1a1a;
+  border-bottom: 1px solid var(--terminal-dim);
+  user-select: none;
+}
+
+.window-title {
+  color: var(--terminal-green);
+  font-size: 0.85rem;
+  text-shadow: 0 0 6px rgba(51, 255, 0, 0.5);
+}
+
+.window-close {
+  background: none;
+  border: 1px solid var(--terminal-dim);
+  color: var(--terminal-red);
+  font-family: var(--mono);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0 0.4rem;
+  line-height: 1;
+  border-radius: 2px;
+}
+
+.window-close:hover {
+  background: var(--terminal-red);
+  color: #000;
+}
+
+.window-content {
+  padding: 1rem;
+  overflow-y: auto;
+  max-height: calc(80vh - 2.5rem);
+  scrollbar-width: none;
+}
+
+.window-content::-webkit-scrollbar {
+  display: none;
+}

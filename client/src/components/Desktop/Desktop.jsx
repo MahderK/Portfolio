@@ -1,35 +1,38 @@
-function Desktop({ onSwitchMode }) {
+import { useState } from "react";
+import DesktopIcon from "./DesktopIcon";
+import Window from "./Window";
+import ProjectsView from "../content/ProjectsView";
+import SkillsView from "../content/SkillsView";
+import ContactView from "../content/ContactView";
+
+const apps = [
+  { id: "projects", label: "Projects", icon: "#documentation-icon", component: ProjectsView },
+  { id: "skills", label: "Skills", icon: "#social-icon", component: SkillsView },
+  { id: "contact", label: "Contact", icon: "#github-icon", component: ContactView },
+];
+
+function Desktop() {
+  const [openWindows, setOpenWindows] = useState([]);
+
+  const openApp = (app) => {
+    if (openWindows.find((w) => w.id === app.id)) return;
+    setOpenWindows((prev) => [...prev, app]);
+  };
+
+  const closeWindow = (id) => {
+    setOpenWindows((prev) => prev.filter((w) => w.id !== id));
+  };
+
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "100vh",
-        background: "#16171d",
-        color: "#9ca3af",
-        fontFamily: "monospace",
-        gap: "16px",
-      }}
-    >
-      <p style={{ color: "#c084fc", fontSize: "24px" }}>// desktop mode</p>
-      <p>coming soon...</p>
-      <button
-        onClick={onSwitchMode}
-        style={{
-          marginTop: "16px",
-          padding: "8px 20px",
-          background: "transparent",
-          border: "1px solid #c084fc",
-          color: "#c084fc",
-          fontFamily: "monospace",
-          cursor: "pointer",
-          fontSize: "14px",
-        }}
-      >
-        &gt; back to terminal
-      </button>
+    <div className="desktop">
+      <div className="desktop-icons">
+        {apps.map((app) => (
+          <DesktopIcon key={app.id} app={app} onOpen={openApp} />
+        ))}
+      </div>
+      {openWindows.map((win) => (
+        <Window key={win.id} app={win} onClose={closeWindow} />
+      ))}
     </div>
   );
 }
