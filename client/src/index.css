@@ -200,7 +200,8 @@ a {
 }
 
 .desktop-icon-label {
-  text-shadow: 0 0 6px rgba(51, 255, 0, 0.4);
+  text-shadow: #000000;
+  color: #ffffff;
 }
 
 /* Window Styles */

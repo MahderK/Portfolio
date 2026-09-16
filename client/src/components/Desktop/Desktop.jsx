@@ -8,7 +8,7 @@ import ContactView from "../content/ContactView";
 const apps = [
   { id: "projects", label: "Projects", icon: "#documentation-icon", component: ProjectsView },
   { id: "skills", label: "Skills", icon: "#social-icon", component: SkillsView },
-  { id: "contact", label: "Contact", icon: "#github-icon", component: ContactView },
+  { id: "contact", label: "Contact", icon: `${import.meta.env.BASE_URL}icons8-github-64.png`, component: ContactView },
 ];
 
 function Desktop() {
