@@ -11,7 +11,7 @@ export const tabletap = [
       "Docker",
       "WebSockets",
     ],
-    live: "https://www.tablet-tap.tech/",
+    live: "https://www.table-tap.tech/",
     status: "In Development",
   },
 ]
