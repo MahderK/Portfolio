@@ -4,9 +4,11 @@ import Window from "./Window";
 import ProjectsView from "../content/ProjectsView";
 import SkillsView from "../content/SkillsView";
 import ContactView from "../content/ContactView";
+import TabletapView from "../content/TabletapView";
 
 const apps = [
   { id: "projects", label: "Projects", icon: "#documentation-icon", component: ProjectsView },
+  { id: "tabletap", label: "TableTap", icon: "#tabletap-icon", component: TabletapView },
   { id: "skills", label: "Skills", icon: "#social-icon", component: SkillsView },
   { id: "contact", label: "Contact", icon: `${import.meta.env.BASE_URL}icons8-github-64.png`, component: ContactView },
 ];
