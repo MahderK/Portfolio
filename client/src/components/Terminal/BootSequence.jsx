@@ -46,9 +46,27 @@ function BootSequence({ onComplete }) {
     }
   }, [currentLineIndex, currentCharIndex, onComplete]);
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.code === "Space") {
+        e.preventDefault();
+        onComplete();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onComplete]);
+
   const handleSkip = () => {
     onComplete();
   };
+
+  const handleKeyDow = (e) => {
+    if (e.code === "Space") {
+      e.preventDefault();
+      onComplete();
+    }
+  }
 
   return (
     <div className="terminal p-4" onClick={handleSkip}>
