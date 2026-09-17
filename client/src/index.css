@@ -160,7 +160,7 @@ a {
 .desktop {
   width: 100vw;
   height: 100vh;
-  background-image: url('public/wallhaven-28d516_1920x1080.png');
+  background-image: url('/wallhaven-28d516_1920x1080.png');
   background-size: cover;
   background-position: center center;
   display: flex;
