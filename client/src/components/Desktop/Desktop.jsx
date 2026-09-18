@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import DesktopIcon from "./DesktopIcon";
 import Window from "./Window";
 import ProjectsView from "../content/ProjectsView";
@@ -23,6 +23,8 @@ const defaultPositions = {
 function Desktop() {
   const [openWindows, setOpenWindows] = useState([]);
   const [positions, setPositions] = useState(defaultPositions);
+  const [selection, setSelection] = useState(null);
+  const startRef = useRef(null);
 
   const openApp = (app) => {
     if (openWindows.find((w) => w.id === app.id)) return;
@@ -37,8 +39,35 @@ function Desktop() {
     setPositions((prev) => ({ ...prev, [id]: pos }));
   }
 
+  const onDesktopMouseDown = (e) => {
+    if (e.target !== e.currentTarget) return;
+    startRef.current = { x: e.clientX, y: e.clientY };
+    setSelection({ x: e.clientX, y: e.clientY, w: 0, h: 0 });
+    window.addEventListener("mousemove", onDesktopMouseMove);
+    window.addEventListener("mouseup", onDesktopMouseUp);
+  };
+
+  const onDesktopMouseMove = (e) => {
+    const s = startRef.current;
+    if (!s) return;
+    setSelection({
+      x: Math.min(s.x, e.clientX),
+      y: Math.min(s.y, e.clientY),
+      w: Math.abs(e.clientX - s.x),
+      h: Math.abs(e.clientY - s.y),
+    });
+  };
+
+  const onDesktopMouseUp = () => {
+    startRef.current = null;
+    setSelection(null);
+    window.removeEventListener("mousemove", onDesktopMouseMove);
+    window.removeEventListener("mouseup", onDesktopMouseUp);
+
+  }
+
   return (
-    <div className="desktop">
+    <div className="desktop" onMouseDown={onDesktopMouseDown}>
       <div className="task-bar">
         <div className="start-menu">
           <p className="start-name">Start</p>
@@ -52,6 +81,17 @@ function Desktop() {
       {openWindows.map((win) => (
         <Window key={win.id} app={win} onClose={closeWindow} />
       ))}
+      {selection && selection.w > 0 && selection.h > 0 && (
+        <div
+          className="selection-box"
+          style={{
+            left: selection.x,
+            top: selection.y,
+            width: selection.w,
+            height: selection.h,
+          }}
+        />
+      )}
     </div>
   );
 }
