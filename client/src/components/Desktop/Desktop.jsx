@@ -7,17 +7,17 @@ import ContactView from "../content/ContactView";
 import TabletapView from "../content/TabletapView";
 
 const apps = [
-  { id: "projects", label: "Projects", icon: "#documentation-icon", component: ProjectsView },
+  { id: "contact", label: "Contact", icon: `${import.meta.env.BASE_URL}contact.png`, component: ContactView },
+  { id: "projects", label: "Projects", icon: `${import.meta.env.BASE_URL}projects.png`, component: ProjectsView },
+  { id: "skills", label: "Skills", icon: `${import.meta.env.BASE_URL}skills.png`, component: SkillsView },
   { id: "tabletap", label: "TableTap", icon: `${import.meta.env.BASE_URL}tabletap.png`, component: TabletapView },
-  { id: "skills", label: "Skills", icon: "#social-icon", component: SkillsView },
-  { id: "contact", label: "Contact", icon: `${import.meta.env.BASE_URL}icons8-github-64.png`, component: ContactView },
 ];
 
 const defaultPositions = {
-  projects: { x: 40, y: 40 },
+  contact: { x: 40, y: 40 },
+  projects: { x: 140, y: 40 },
+  skills: { x: 150, y: 140 },
   tabletap: { x: 40, y: 140 },
-  skills: { x: 40, y: 240 },
-  contact: { x: 40, y: 340 },
 };
 
 function Desktop() {
