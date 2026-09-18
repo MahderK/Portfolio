@@ -39,6 +39,11 @@ function Desktop() {
 
   return (
     <div className="desktop">
+      <div className="task-bar">
+        <div className="start-menu">
+          <p className="start-name">Start</p>
+        </div>
+      </div>
       <div className="desktop-icons">
         {apps.map((app) => (
           <DesktopIcon key={app.id} app={app} onOpen={openApp} position={positions[app.id]} onMove={updatePosition} />
