@@ -5,12 +5,14 @@ import ProjectsView from "../content/ProjectsView";
 import SkillsView from "../content/SkillsView";
 import ContactView from "../content/ContactView";
 import TabletapView from "../content/TabletapView";
+import CvView from "../content/CvView";
 
 const apps = [
   { id: "contact", label: "Contact", icon: `${import.meta.env.BASE_URL}contact.png`, component: ContactView },
   { id: "projects", label: "Projects", icon: `${import.meta.env.BASE_URL}projects.png`, component: ProjectsView },
   { id: "skills", label: "Skills", icon: `${import.meta.env.BASE_URL}skills.png`, component: SkillsView },
   { id: "tabletap", label: "TableTap", icon: `${import.meta.env.BASE_URL}tabletap.png`, component: TabletapView },
+  { id: "cv", label: "CV", icon: `${import.meta.env.BASE_URL}contact.png`, component: CvView },
 ];
 
 const defaultPositions = {
@@ -18,6 +20,7 @@ const defaultPositions = {
   projects: { x: 140, y: 40 },
   skills: { x: 150, y: 140 },
   tabletap: { x: 40, y: 140 },
+  cv: { x: 40, y: 240 },
 };
 
 function Desktop() {
